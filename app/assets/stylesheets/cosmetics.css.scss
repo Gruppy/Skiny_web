@@ -1,8 +1,15 @@
 @import "selection";
 
-.cosmetic-title {
+.cosmetic-name {
   font-size: 20px;
-  margin: 1em;
+  margin: 1em 12px;
+}
+
+.brand-name,
+.category-name {
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 12px;
 }
 
 .no-cosmetics-wrap {

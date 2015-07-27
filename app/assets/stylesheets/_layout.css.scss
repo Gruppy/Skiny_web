@@ -1,0 +1,26 @@
+@import "bootstrap-sass-official/bootstrap-sprockets";
+@import "bootstrap-sass-official/bootstrap";
+
+$text_color: #000000;
+$white: #ffffff;
+$gray: #9d9d9d;
+$light_gray: #bfbfbf;
+$extra_light_gray: #fafafa;
+$pink: #ff8597;
+$bg_pink: #ffebee;
+
+.navbar {
+  text-align: center;
+  padding: 0.8em 0;
+  background: $pink;
+  margin: 0 auto;
+
+  .title {
+    a {
+      font-size: 20px;
+      color: $white;
+      margin: 0 auto;
+      text-decoration: none;
+    }
+  }
+}

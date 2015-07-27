@@ -1,0 +1,13 @@
+.cosmetics-index-wrap
+  .container
+    .select-category-wrap
+      - if @cosmetics.present?
+        %h1
+          商品を選択
+        %ul
+          - @cosmetics.each do |cosmetic|
+            %li
+              = link_to cosmetic.name, cosmetic_path(id: cosmetic.id)
+      - else
+        %h2
+          お探しの商品はありません。

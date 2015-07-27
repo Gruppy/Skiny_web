@@ -1,0 +1,9 @@
+.brands-index-wrap
+  .container
+    .select-brand-wrap
+      %h1
+        ブランドを選択
+      %ul
+        - @brands.each do |brand|
+          %li
+            = link_to brand.name, cosmetics_path(category: @category.slug, brand: brand.slug)

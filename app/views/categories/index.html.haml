@@ -1,0 +1,9 @@
+.categories-index-wrap
+  .container
+    .select-category-wrap
+      %h1
+        カテゴリを選択
+      %ul
+        - @categories.each do |category|
+          %li
+            = link_to category.name, brands_path(category.slug)

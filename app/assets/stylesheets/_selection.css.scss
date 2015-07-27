@@ -13,6 +13,7 @@
   ul {
     padding: 0;
     list-style: none;
+
     li {
       background-color: $extra_light_gray;
       padding: 1.5em;
@@ -20,6 +21,7 @@
       border: solid;
       border-width: 2px;
       border-color: $white;
+
       a {
         display: block;
         color: $text-color;

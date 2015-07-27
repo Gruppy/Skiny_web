@@ -1,8 +1,8 @@
 .cosmetics-index-wrap
   .container
-    .select-category-wrap
+    .selection-wrap
       - if @cosmetics.present?
-        %h1
+        .select-title
           商品を選択
         %ul
           - @cosmetics.each do |cosmetic|

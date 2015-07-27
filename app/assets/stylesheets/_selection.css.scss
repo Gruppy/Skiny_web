@@ -4,10 +4,35 @@
   padding: 0;
 }
 
+.selected-category-wrap,
+.selected-brand-wrap {
+  font-size: 20px;
+  margin: 1em 12px;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
+.order {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  color: $white;
+  background-color: $light_gray;
+  border-radius: 50%;
+  padding: 0 9px;
+}
+
 .selection-wrap {
   .select-title {
+    .order {
+      background-color: $pink;
+    }
+
     font-size: 20px;
-    margin: 1em;
+    margin: 1em 12px;
   }
 
   ul {

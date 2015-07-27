@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get '/:category', to: 'brands#index', as: :brands
 
+  get '/:category/:brand', to: 'cosmetics#index', as: :cosmetics
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

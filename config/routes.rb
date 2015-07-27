@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get '/:category', to: 'brands#index', as: :brands
 
+  resources :cosmetics, only: [:show]
   get '/:category/:brand', to: 'cosmetics#index', as: :cosmetics
 
   # The priority is based upon order of creation: first created -> highest priority.

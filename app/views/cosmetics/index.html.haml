@@ -7,7 +7,7 @@
         %ul
           - @cosmetics.each do |cosmetic|
             %li
-              = link_to cosmetic.name
+              = link_to cosmetic.name, cosmetic_path(id: cosmetic.id)
       - else
         %h2
           お探しの商品はありません。

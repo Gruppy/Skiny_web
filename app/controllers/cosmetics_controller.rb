@@ -5,4 +5,8 @@ class CosmeticsController < ApplicationController
 
     @cosmetics = Cosmetic.where(category_id: @category.id, brand_id: @brand.id)
   end
+
+  def show
+    @cosmetic = Cosmetic.find_by(id: params[:id])
+  end
 end

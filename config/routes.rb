@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: 'categories#index'
 
+  resources :categories, only: [:index]
+
   get '/:category', to: 'brands#index', as: :brands
 
   resources :cosmetics, only: [:show]

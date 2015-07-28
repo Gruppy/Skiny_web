@@ -9,6 +9,18 @@
 
     .ingredients-wrap
       - if @ingredients.present?
+    - if @similar_cosmetics
+      .similar-cosmetics-wrap
+        %ul
+          - @similar_cosmetics.each do |similar_cosmetic|
+            %li
+              .similar-cosmetic-name
+                = similar_cosmetic[:cosmetic].name
+              .similar-cosmetic-similarity
+                = similar_cosmetic[:similarity].value
+        .show-more-similar-cosmetics-button
+          もっとみる
+
         %ul
           - @ingredients.each do |ingredient|
             %li

@@ -11,6 +11,14 @@ class CosmeticsController < ApplicationController
     @category = Category.find_by(id: @cosmetic.category_id)
     @brand = Brand.find_by(id: @cosmetic.brand_id)
 
+    @similar_cosmetics = []
+    @cosmetic.similarities.order("value DESC").each do |similarity|
+      similar_cosmetic = {}
+      similar_cosmetic[:cosmetic] = Cosmetic.find_by(id: similarity.against_cosmetic_id)
+      similar_cosmetic[:similarity] = similarity
+      @similar_cosmetics << similar_cosmetic
+    end
+
     @ingredients = []
     @cosmetic.cosmetic_ingredients.order(:order).each do |cosmetic_ingredient|
       @ingredients << Ingredient.find_by(id: cosmetic_ingredient.ingredient_id)

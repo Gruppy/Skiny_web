@@ -7,8 +7,6 @@
     .category-name
       = @category.name
 
-    .ingredients-wrap
-      - if @ingredients.present?
     - if @similar_cosmetics
       .similar-cosmetics-wrap
         %ul
@@ -21,6 +19,8 @@
         .show-more-similar-cosmetics-button
           もっとみる
 
+    - if @ingredients.present?
+      .ingredients-wrap
         %ul
           - @ingredients.each do |ingredient|
             %li

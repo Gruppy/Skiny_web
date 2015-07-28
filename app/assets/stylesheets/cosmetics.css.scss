@@ -19,7 +19,8 @@
 
 .ingredients-wrap {
   ul {
-    padding: 0 12px 12px 12px;
+    margin: 8px 0;
+    padding: 0 18px;
     list-style: none;
 
     li {
@@ -27,6 +28,9 @@
       border-bottom: solid;
       border-width: 1px;
       border-color: $super_light_gray;
+      &:last-child {
+        border-bottom: none;
+      }
     }
   }
 
@@ -34,7 +38,7 @@
     font-size: 14px;
     text-align: center;
     vertical-align: middle;
-    margin: 12px;
+    margin: 0 12px;
     padding: 6px;
     border: solid;
     border-width: 1px;

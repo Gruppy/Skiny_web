@@ -1,11 +1,91 @@
 @import "selection";
 
-.cosmetic-title {
-  font-size: 20px;
-  margin: 1em;
-}
-
 .no-cosmetics-wrap {
   font-size: 20px;
   margin: 1em 12px;
+}
+
+.cosmetic-name {
+  font-size: 20px;
+  margin: 1em 12px;
+}
+
+.brand-name,
+.category-name {
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 12px;
+}
+
+.similar-cosmetics-wrap {
+  ul {
+    margin: 8px 0;
+    padding: 0 18px;
+    list-style: none;
+
+    li {
+      padding: 6px;
+      border-bottom: solid;
+      border-width: 1px;
+      border-color: $super_light_gray;
+      position: relative;
+
+      .similar-cosmetic-name {
+        display: inline-block;
+      }
+
+      .similar-cosmetic-similarity {
+        position: absolute;
+        right: 0;
+        display: inline-block;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .show-more-similar-cosmetics-button {
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 12px;
+    padding: 6px;
+    border: solid;
+    border-width: 1px;
+    border-color: $light_gray;
+    border-radius: 17px;
+  }
+}
+
+.ingredients-wrap {
+  ul {
+    margin: 8px 0;
+    padding: 0 18px;
+    list-style: none;
+
+    li {
+      padding: 6px;
+      border-bottom: solid;
+      border-width: 1px;
+      border-color: $super_light_gray;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .show-ingredients-button {
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 12px;
+    padding: 6px;
+    border: solid;
+    border-width: 1px;
+    border-color: $light_gray;
+    border-radius: 17px;
+  }
 }

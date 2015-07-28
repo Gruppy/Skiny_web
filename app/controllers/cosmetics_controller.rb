@@ -12,7 +12,7 @@ class CosmeticsController < ApplicationController
     @brand = Brand.find_by(id: @cosmetic.brand_id)
 
     @ingredients = []
-    @cosmetic.cosmetic_ingredients.each do |cosmetic_ingredient|
+    @cosmetic.cosmetic_ingredients.order(:order).each do |cosmetic_ingredient|
       @ingredients << Ingredient.find_by(id: cosmetic_ingredient.ingredient_id)
     end
   end

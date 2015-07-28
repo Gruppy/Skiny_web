@@ -6,3 +6,9 @@
       = @brand.name
     .category-name
       = @category.name
+    .ingredients-wrap
+      - if @ingredients.present?
+        %ul
+          - @ingredients.each do |ingredient|
+            %li
+              = ingredient.name

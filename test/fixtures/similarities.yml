@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cosmetic_id: 1
+  against_cosmetic_id: 1
+  value: 1.5
+
+two:
+  cosmetic_id: 1
+  against_cosmetic_id: 1
+  value: 1.5

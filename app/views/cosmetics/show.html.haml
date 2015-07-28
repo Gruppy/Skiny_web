@@ -6,9 +6,12 @@
       = @brand.name
     .category-name
       = @category.name
+
     .ingredients-wrap
       - if @ingredients.present?
         %ul
           - @ingredients.each do |ingredient|
             %li
               = ingredient.name
+        .show-ingredients-bar
+          成分を表示

@@ -28,9 +28,6 @@
       border-bottom: solid;
       border-width: 1px;
       border-color: $super_light_gray;
-      &:last-child {
-        border-bottom: none;
-      }
       position: relative;
 
       .similar-cosmetic-name {
@@ -41,6 +38,10 @@
         position: absolute;
         right: 0;
         display: inline-block;
+      }
+
+      &:last-child {
+        border-bottom: none;
       }
     }
   }
@@ -69,6 +70,7 @@
       border-bottom: solid;
       border-width: 1px;
       border-color: $super_light_gray;
+
       &:last-child {
         border-bottom: none;
       }

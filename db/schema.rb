@@ -28,11 +28,11 @@ ActiveRecord::Schema.define(version: 20150728044136) do
   end
 
   create_table "cosmetic_ingredients", force: :cascade do |t|
-    t.integer  "ingredient_id", limit: 4
-    t.integer  "cosmetic_id",   limit: 4
-    t.integer  "order",         limit: 4
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.integer  "ingredient_id",    limit: 4
+    t.integer  "cosmetic_id",      limit: 4
+    t.integer  "ingredient_order", limit: 4
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "cosmetics", force: :cascade do |t|

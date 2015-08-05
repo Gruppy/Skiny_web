@@ -8,4 +8,4 @@
       %ul
         - @categories.each do |category|
           %li
-            = link_to category.name, brands_path(category.slug)
+            = link_to category.name, brands_path(category.id)

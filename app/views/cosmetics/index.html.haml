@@ -9,7 +9,7 @@
       .selected-brand-wrap
         .order
           2
-        = link_to @brand.name, brands_path(@category.slug)
+        = link_to @brand.name, brands_path(@category.id)
 
     - if @cosmetics.present?
       .selection-wrap

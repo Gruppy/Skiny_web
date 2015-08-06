@@ -8,16 +8,14 @@
       .category-name
         = @cosmetic.category_name
 
-    - if @similar_cosmetics
+    - if @similar_cosmetics.present?
       .similar-cosmetics-wrap
         %ul
           - @similar_cosmetics.each do |similar_cosmetic|
             %li
               .similar-cosmetic-name
-                = similar_cosmetic.name
+                = link_to similar_cosmetic.name, cosmetic_path(id: similar_cosmetic.cosmetic_id)
                 = similar_cosmetic.value
-        .show-more-similar-cosmetics-button
-          もっとみる
 
     - if @ingredients.present?
       .ingredients-wrap

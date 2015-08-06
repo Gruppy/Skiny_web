@@ -1,26 +1,8 @@
 .cosmetics-index-wrap
   .container
-    - if @category.present?
-      .selected-category-wrap
-        .order
-          1
-        = link_to @category.name, categories_path
-    - if @brand.present?
-      .selected-brand-wrap
-        .order
-          2
-        = link_to @brand.name, brands_path(@category.id)
-
     - if @cosmetics.present?
       .selection-wrap
-        .select-title
-          .order
-            3
-          商品を選択
         %ul
           - @cosmetics.each do |cosmetic|
             %li
               = link_to cosmetic.name, cosmetic_path(id: cosmetic.id)
-    - else
-      .no-cosmetics-wrap
-        お探しの商品はありません。

@@ -47,6 +47,10 @@
         padding: 15px;
       }
 
+      &:last-child {
+        border-bottom: none;
+      }
+
       &:hover {
         background-color: $bg_pink;
       }

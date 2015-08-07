@@ -1,5 +1,11 @@
 .cosmetics-index-wrap
   .container
+    .search-form-wrap
+      = search_form_for @search do |f|
+        = f.text_field :name_cont, placeholder: "商品名"
+        = f.text_field :brand_name_cont, placeholder: "ブランド名"
+        = f.submit
+
     - if @cosmetics.present?
       .selection-wrap
         %ul

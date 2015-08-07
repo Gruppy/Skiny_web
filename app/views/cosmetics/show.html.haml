@@ -1,23 +1,21 @@
 .cosmetics-show-wrap
   .container
-    .cosmetic-name
-      = @cosmetic.name
-    .brand-name
-      = @brand.name
-    .category-name
-      = @category.name
+    - if @cosmetic
+      .cosmetic-name
+        = @cosmetic.name
+      .brand-name
+        = @cosmetic.brand_name
+      .category-name
+        = @cosmetic.category_name
 
-    - if @similar_cosmetics
+    - if @similar_cosmetics.present?
       .similar-cosmetics-wrap
         %ul
           - @similar_cosmetics.each do |similar_cosmetic|
             %li
               .similar-cosmetic-name
-                = similar_cosmetic[:cosmetic].name
-              .similar-cosmetic-similarity
-                = similar_cosmetic[:similarity].value
-        .show-more-similar-cosmetics-button
-          もっとみる
+                = link_to similar_cosmetic.name, cosmetic_path(id: similar_cosmetic.cosmetic_id)
+                = similar_cosmetic.value
 
     - if @ingredients.present?
       .ingredients-wrap
@@ -25,5 +23,3 @@
           - @ingredients.each do |ingredient|
             %li
               = ingredient.name
-        .show-ingredients-button
-          成分を表示

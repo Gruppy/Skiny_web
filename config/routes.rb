@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'categories#index'
+  root to: 'cosmetics#index'
 
-  resources :categories, only: [:index]
-
-  get '/:category', to: 'brands#index', as: :brands
-
-  resources :cosmetics, only: [:show]
-  get '/:category/:brand', to: 'cosmetics#index', as: :cosmetics
+  resources :cosmetics, only: [:index, :show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

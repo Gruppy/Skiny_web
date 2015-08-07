@@ -1,38 +1,36 @@
 @import "selection";
 
-.no-cosmetics-wrap {
-  font-size: 20px;
-  margin: 1em 12px;
-}
+.cosmetics-index-wrap {
+  .search-form-wrap {
+    background-color: $super_light_gray;
 
-.cosmetic-name {
-  font-size: 20px;
-  margin: 1em 12px;
-}
+    .search-form {
+      margin: 15px;
+    }
 
-.brand-name,
-.category-name {
-  display: inline-block;
-  font-size: 12px;
-  margin: 0 12px;
-}
+    .search-field {
+      display: inline-block;
+      width: 70%;
+      border: solid 1px $gray;
+      padding: 8px;
+      border-radius: $round;
+    }
 
-.similar-cosmetics-wrap {
-  ul {
-    margin: 8px 0;
-    padding: 0 18px;
-    list-style: none;
+    .search-submit {
+      display: inline-block;
+      margin-left: 10px;
+      padding: 8px;
+      width: 25%;
+      background-color: $pink;
+      color: $white;
+      border: none;
+      border-radius: $round;
 
-    li {
-      padding: 6px;
-      border-bottom: solid;
-      border-width: 1px;
-      border-color: $super_light_gray;
-      position: relative;
-
-      .similar-cosmetic-name {
-        display: inline-block;
+      &:hover {
+        opacity: 0.5;
       }
+    }
+  }
 
       .similar-cosmetic-similarity {
         position: absolute;

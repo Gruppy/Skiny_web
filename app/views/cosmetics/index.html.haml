@@ -1,10 +1,10 @@
 .cosmetics-index-wrap
-  .container
-    .search-form-wrap
-      = search_form_for @search do |f|
-        = f.text_field :name_cont, placeholder: "商品名"
-        = f.text_field :brand_name_cont, placeholder: "ブランド名"
-        = f.submit
+  .search-form-wrap
+    .container
+      .search-form
+        = search_form_for @search do |f|
+          = f.text_field :name_or_brand_name_cont, placeholder: "商品・ブランド名を入力", class: 'search-field'
+          = f.submit "検索", class: 'search-submit'
 
     - if @cosmetics.present?
       .selection-wrap

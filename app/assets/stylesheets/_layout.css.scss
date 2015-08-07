@@ -2,14 +2,21 @@
 @import "bootstrap-sass-official/bootstrap";
 @import 'variables';
 
+.container {
+  padding: 0;
+}
+
+.header-wrap {
+  background-color: $pink;
+}
 
 .navbar {
-  text-align: center;
-  padding: 0.8em 0;
-  background: $pink;
+  padding: 10px 0;
   margin: 0 auto;
 
   .title {
+    margin-left: 20px;
+
     a {
       font-size: 20px;
       color: $white;

@@ -125,14 +125,16 @@
 }
 
 .section-title-wrap {
+  background-color: $super_light_gray;
+
   li {
     display: inline-block;
     vertical-align: middle;
   }
 
   .left-bar {
-    height: 28px;
-    width: 6px;
+    height: 36px;
+    width: 3px;
     background-color: $pink;
   }
 

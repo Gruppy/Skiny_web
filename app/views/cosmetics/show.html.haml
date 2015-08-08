@@ -1,25 +1,31 @@
 .cosmetics-show-wrap
   .container
     - if @cosmetic
-      .cosmetic-name
-        = @cosmetic.name
-      .brand-name
-        = @cosmetic.brand_name
-      .category-name
-        = @cosmetic.category_name
+      .cosmetic-top-wrap
+        .category-name
+          = @cosmetic.category_name
+        .cosmetic-name
+          = @cosmetic.name
+        .brand-name
+          = @cosmetic.brand_name
 
     - if @similar_cosmetics.present?
-      .similar-cosmetics-wrap
+      .cosmetics-list-wrap
         %ul
           - @similar_cosmetics.each do |similar_cosmetic|
-            %li
-              .similar-cosmetic-name
-                = link_to similar_cosmetic.name, cosmetic_path(id: similar_cosmetic.cosmetic_id)
-                = similar_cosmetic.value
+            %li.cosmetic-list-item
+              = link_to cosmetic_path(id: similar_cosmetic.cosmetic_id) do
+                .cosmetic-name
+                  = similar_cosmetic.name
+                .cosmetic-brand
+                  = similar_cosmetic.brand.name
+                .cosmetic-similarity
+                  = similar_cosmetic.value
 
     - if @ingredients.present?
-      .ingredients-wrap
+      .ingredients-list-wrap
         %ul
           - @ingredients.each do |ingredient|
-            %li
-              = ingredient.name
+            %li.ingredient-list-item
+              .ingredient-name
+                = ingredient.name

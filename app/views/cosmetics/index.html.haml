@@ -1,14 +1,23 @@
 .cosmetics-index-wrap
-  .container
-    .search-form-wrap
-      = search_form_for @search do |f|
-        = f.text_field :name_cont, placeholder: "商品名"
-        = f.text_field :brand_name_cont, placeholder: "ブランド名"
-        = f.submit
+  .search-form-wrap
+    .container
+      .search-form
+        = search_form_for @search do |f|
+          = f.text_field :name_or_brand_name_cont, placeholder: "商品・ブランド名を入力", class: 'search-field'
+          = f.submit "検索", class: 'search-submit'
 
+  .container
     - if @cosmetics.present?
-      .selection-wrap
+      .cosmetics-list-wrap
         %ul
           - @cosmetics.each do |cosmetic|
-            %li
-              = link_to cosmetic.name, cosmetic_path(id: cosmetic.id)
+            %li.cosmetic-list-item
+              = link_to cosmetic_path(id: cosmetic.id) do
+                .cosmetic-name
+                  = cosmetic.name
+                .cosmetic-brand
+                  = cosmetic.brand.name
+
+    - else
+      .no-cosmetics-wrap
+        お探しの商品はありません

@@ -1,7 +1,7 @@
 class CosmeticsController < ApplicationController
   def index
     @search = Cosmetic.toilet_water.search(params[:q])
-    @cosmetics  = @search.result
+    @cosmetics = @search.result
   end
 
   def show

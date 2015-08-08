@@ -1,22 +1,23 @@
 @import "bootstrap-sass-official/bootstrap-sprockets";
 @import "bootstrap-sass-official/bootstrap";
+@import 'variables';
 
-$text_color: #000000;
-$white: #ffffff;
-$gray: #9d9d9d;
-$light_gray: #bfbfbf;
-$extra_light_gray: #f2f2f2;
-$super_light_gray: #fafafa;
-$pink: #ff8597;
-$bg_pink: #ffebee;
+.container {
+  padding: 0;
+}
+
+.header-wrap {
+  background-color: $pink;
+  border-bottom: solid 1px $border_color;
+}
 
 .navbar {
-  text-align: center;
-  padding: 0.8em 0;
-  background: $pink;
+  padding: 10px 0;
   margin: 0 auto;
 
   .title {
+    margin-left: 20px;
+
     a {
       font-size: 20px;
       color: $white;

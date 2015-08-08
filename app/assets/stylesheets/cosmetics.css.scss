@@ -10,7 +10,7 @@
 
   .search-field {
     display: inline-block;
-    width: 70%;
+    width: 80%;
     border: solid 1px $gray_text_color;
     padding: 8px;
     border-radius: $round;
@@ -18,9 +18,9 @@
 
   .search-submit {
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 5px;
     padding: 8px;
-    width: 25%;
+    width: 15%;
     background-color: $pink;
     color: $white;
     border: none;

@@ -33,7 +33,7 @@
 }
 
 .cosmetics-list-wrap {
-  margin: 10px;
+  margin: 15px 10px;
 
   ul {
     padding: 0;
@@ -83,7 +83,7 @@
 }
 
 .cosmetic-top-wrap {
-  margin: 15px;
+  margin: 15px 15px 20px 15px;
 
   .category-name {
     margin-bottom: 5px;
@@ -102,7 +102,7 @@
 }
 
 .ingredients-list-wrap {
-  margin: 10px;
+  margin: 15px 10px;
 
   ul {
     padding: 0;
@@ -121,5 +121,23 @@
   .ingredient-name {
     margin: 0 5px;
     font-size: 14px;
+  }
+}
+
+.section-title-wrap {
+  li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .left-bar {
+    height: 28px;
+    width: 6px;
+    background-color: $pink;
+  }
+
+  .section-title {
+    margin-left: 5px;
+    font-size: 18px;
   }
 }

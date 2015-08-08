@@ -11,6 +11,11 @@
 
     - if @similar_cosmetics.present?
       .cosmetics-list-wrap
+        %ul.section-title-wrap
+          %li.left-bar
+          %li.section-title
+            成分が似ているコスメ
+
         %ul
           - @similar_cosmetics.each do |similar_cosmetic|
             %li.cosmetic-list-item
@@ -24,6 +29,11 @@
 
     - if @ingredients.present?
       .ingredients-list-wrap
+        %ul.section-title-wrap
+          %li.left-bar
+          %li.section-title
+            成分一覧
+
         %ul
           - @ingredients.each do |ingredient|
             %li.ingredient-list-item

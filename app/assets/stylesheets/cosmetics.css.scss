@@ -41,7 +41,7 @@
   }
 
   .cosmetic-list-item {
-    border-bottom: solid 1px $border_color;
+    border-bottom: solid 1px $light_border_color;
 
     a {
       text-decoration: none;
@@ -110,7 +110,7 @@
   }
 
   .ingredient-list-item {
-    border-bottom: solid 1px $border_color;
+    border-bottom: solid 1px $light_border_color;
     padding: 8px 0;
 
     &:last-child {

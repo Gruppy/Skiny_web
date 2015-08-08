@@ -1,7 +1,9 @@
 class CosmeticsController < ApplicationController
   def index
     @search = Cosmetic.toilet_water.search(params[:q])
-    @cosmetics = @search.result
+    if params[:q].present? && params[:q][:name_or_brand_name_cont].present?
+      @cosmetics = @search.result
+    end
   end
 
   def show

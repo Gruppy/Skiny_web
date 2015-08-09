@@ -19,9 +19,21 @@
                   = cosmetic.brand.name
 
     - else
-      - if params[:q].present? && params[:q][:name_or_brand_name_cont].present?
-        .no-cosmetics-wrap
-          お探しの商品はありません
+      - if params[:q].present?
+        - if params[:q][:name_or_brand_name_cont].present?
+          .no-cosmetics-wrap
+            お探しの商品はありません
+        - else
+          .no-cosmetics-wrap
+            検索ワードを入力して下さい
       - else
-        .no-cosmetics-wrap
-          検索ワードを入力して下さい
+        .delineation-wrap
+          %p.welcome-sentence
+            Skiny へようこそ！
+          %p.description-sentence
+            今お持ちのコスメ、憧れのコスメから、近い成分を持ったコスメを提案！
+            %br
+            %span
+              同じ成分なのに安いコスメが見つかる！
+          %p.notification-sentence
+            ※ 現在「化粧水」のみの対応です。（更新中）

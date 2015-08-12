@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cosmetic_id: 1
+  price: 1
+  type: 
+  url: MyString
+
+two:
+  cosmetic_id: 1
+  price: 1
+  type: 
+  url: MyString

@@ -24,7 +24,7 @@ class Cosmetic < ActiveRecord::Base
     Ingredient.where(id: cosmetic_ingredient.ingredient_id)
   end
 
-  def price
+  def store_price
     Store.find_by(cosmetic_id: self.id).price
   end
 

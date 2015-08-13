@@ -8,6 +8,10 @@
           = @cosmetic.name
         .brand-name
           = @cosmetic.brand_name
+        .store_price
+          = @cosmetic.store_price
+          円
+
 
     - if @similar_cosmetics.present?
       .cosmetics-list-wrap
@@ -23,9 +27,12 @@
                 .cosmetic-name
                   = similar_cosmetic.name
                 .cosmetic-brand
-                  = similar_cosmetic.brand.name
+                  = similar_cosmetic.brand_name
                 .cosmetic-similarity
                   = similar_cosmetic.value
+                .cosmetic-price
+                  = similar_cosmetic.store_price
+                  円
 
     - if @ingredients.present?
       .ingredients-list-wrap

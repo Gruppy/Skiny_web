@@ -8,7 +8,7 @@ class CosmeticsController < ApplicationController
 
   def show
     @cosmetic = Cosmetic.find_by(id: params[:id])
-    @similar_cosmetics = @cosmetic.similar_cosmetics.limit(5)
+    @similar_cosmetics = @cosmetic.similar_cosmetics
     @ingredients = @cosmetic.ingredients
   end
 end

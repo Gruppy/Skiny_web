@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150812101910) do
+ActiveRecord::Schema.define(version: 20150815043816) do
 
   create_table "brands", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20150812101910) do
     t.float    "value",               limit: 24
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+    t.integer  "similarity_order",    limit: 4
   end
 
   create_table "stores", force: :cascade do |t|

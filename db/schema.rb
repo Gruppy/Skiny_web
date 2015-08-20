@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150817043115) do
+ActiveRecord::Schema.define(version: 20150820021411) do
 
   create_table "brands", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(version: 20150817043115) do
     t.datetime "updated_at",                       null: false
     t.integer  "similarity_order",      limit: 4
   end
+
+  add_index "similarities", ["subjected_cosmetic_id"], name: "index_similarities_on_subjected_cosmetic_id", using: :btree
 
   create_table "stores", force: :cascade do |t|
     t.integer  "cosmetic_id", limit: 4

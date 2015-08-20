@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'rails-assets-bootstrap-sass-official'
 gem 'ransack'
+gem 'google-analytics-rails'
 
 group :development, :test do
   gem 'byebug'

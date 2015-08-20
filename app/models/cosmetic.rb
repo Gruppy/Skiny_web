@@ -30,7 +30,6 @@ class Cosmetic < ActiveRecord::Base
 
   def similar_cosmetics
     Cosmetic
-      .toilet_water
       .joins_get_all_columns(:similarities, :stores)
       .merge(Similarity.where(subjected_cosmetic_id: id).where(similarity_order: 1..5).order("similarity_order"))
   end

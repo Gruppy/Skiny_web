@@ -10,5 +10,6 @@ Rails.application.configure do
   config.assets.digest = true
   config.log_level = :debug
   config.active_record.dump_schema_after_migration = false
+  config.force_ssl = true
   GA.tracker = "UA-66412915-1"
 end

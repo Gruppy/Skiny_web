@@ -1,12 +1,5 @@
 @import "layout";
 
-p {
-  margin: 15px auto;
-  width: 300px;
-  text-align: center;
-  font-size: 14px;
-}
-
 .title-wrap {
   margin: 15px;
   font-size: 20px;
@@ -14,6 +7,13 @@ p {
 
 .form-wrap {
   margin: 15px;
+
+  p {
+    margin: 15px auto;
+    width: 300px;
+    text-align: center;
+    font-size: 14px;
+  }
 }
 
 .user-name-text-field,

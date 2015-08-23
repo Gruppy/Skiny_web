@@ -19,14 +19,30 @@ ul {
   padding: 10px 0;
   margin: 0 auto;
 
+  li {
+    display: inline-block;
+  }
+
+  a {
+    color: $white;
+    margin: 0 auto;
+    text-decoration: none;
+  }
+
   .title {
     margin-left: 20px;
 
     a {
       font-size: 20px;
-      color: $white;
-      margin: 0 auto;
-      text-decoration: none;
     }
+  }
+
+  .user-nav {
+    float: right;
+    margin-right: 15px;
+    font-size: 12px;
+    border: solid 1px $white;
+    padding: 4px 10px;
+    border-radius: 13px;
   }
 }

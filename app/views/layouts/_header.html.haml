@@ -1,5 +1,10 @@
 .header-wrap
   .container
-    .navbar
-      .title
+    %ul.navbar
+      %li.title
         = link_to "Skiny", root_path
+      %li.user-nav
+        - if signed_in?
+          = link_to "マイページ", "#"
+        - else
+          = link_to "ログイン", signin_path

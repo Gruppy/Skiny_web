@@ -2,12 +2,12 @@
   .container
     .title-wrap
       ログイン
-    .signin-form-wrap
+    .form-wrap
       = form_for :session, url: sessions_path do |f|
         = f.text_field :email, placeholder: "メールアドレス", class: 'email-text-field'
         = f.password_field :password, placeholder: "パスワード", class: 'password-field'
-        = f.submit "ログイン", class: 'signin-submit'
+        = f.submit "ログイン", class: 'submit-button'
       %p
         はじめての方は
-      .signup-link-button
+      .link-button
         = link_to "無料会員登録", signup_path

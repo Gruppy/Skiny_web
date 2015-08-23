@@ -2,6 +2,10 @@
 @import "bootstrap-sass-official/bootstrap";
 @import 'variables';
 
+ul {
+  list-style: none;
+}
+
 .container {
   padding: 0;
 }

@@ -5,6 +5,6 @@
         = link_to "Skiny", root_path
       %li.user-nav
         - if signed_in?
-          = link_to "マイページ", "#"
+          = link_to "マイページ", user_path(current_user)
         - else
           = link_to "ログイン", signin_path

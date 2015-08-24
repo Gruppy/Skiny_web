@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'cosmetics#index'
 
   resources :cosmetics, only: [:index, :show]
-  resources :users
+  resources :users, except: [:index]
   resources :sessions, only: [:new, :create, :destroy]
 
   match '/signup', to: 'users#new', via: 'get'

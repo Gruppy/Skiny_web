@@ -1,4 +1,9 @@
 .users-show-wrap
   .container
-    = @user.name
-    = @user.email
+    .title-wrap
+      = @user.name
+
+    .profile-edit-button
+      = link_to "プロフィール設定", edit_user_path(current_user)
+    .signout-button
+      = link_to "ログアウト", signout_path, method: :delete

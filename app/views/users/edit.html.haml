@@ -1,0 +1,13 @@
+.users-edit-wrap
+  .container
+    .title-wrap
+      プロフィール設定
+    .form-wrap
+      = form_for @user do |f|
+        = render 'shared/error_messages'
+        = f.text_field :name, placeholder: "ユーザー名", class: 'user-name-text-field'
+        = f.text_field :email, placeholder: "メールアドレス", class: 'email-text-field'
+        = f.password_field :password, placeholder: "現在のパスワード", class: 'password-field'
+        = f.password_field :password, placeholder: "新しいパスワード", class: 'password-field'
+        = f.password_field :password_confirmation, placeholder: "新しいパスワード (確認)", class: 'password-confirmation-field'
+        = f.submit "変更を確定", class: 'submit-button'

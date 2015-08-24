@@ -1,0 +1,5 @@
+.error-messages-wrap
+  %ul
+    - @user.errors.full_messages.each do |msg|
+      %li
+        = msg

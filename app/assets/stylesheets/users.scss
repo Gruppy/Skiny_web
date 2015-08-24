@@ -58,3 +58,23 @@
     opacity: 0.5;
   }
 }
+
+.profile-edit-button,
+.signout-button {
+  margin: 15px 15px 0 15px;
+  background-color: $bg_gray;
+  padding: 8px;
+  border: none;
+  border-radius: $round;
+  text-align: center;
+
+  a {
+    display: block;
+    color: $text_color;
+    text-decoration: none;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

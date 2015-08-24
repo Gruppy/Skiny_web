@@ -41,8 +41,12 @@ ul {
     float: right;
     margin-right: 15px;
     font-size: 12px;
-    border: solid 1px $white;
-    padding: 5px 10px 3px;
-    border-radius: 13px;
+
+    li {
+      margin-left: 10px;
+      border: solid 1px $white;
+      padding: 5px 10px 3px;
+      border-radius: 13px;
+    }
   }
 }

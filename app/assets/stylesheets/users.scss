@@ -1,12 +1,12 @@
 @import "layout";
 
 .title-wrap {
-  margin: 15px;
+  margin: 15px 5px;
   font-size: 20px;
 }
 
 .form-wrap {
-  margin: 15px;
+  margin: 5px;
 
   p {
     margin: 15px auto;
@@ -61,7 +61,7 @@
 
 .profile-edit-button,
 .signout-button {
-  margin: 15px 15px 0 15px;
+  margin-bottom: 15px;
   background-color: $bg_gray;
   padding: 8px;
   border: none;

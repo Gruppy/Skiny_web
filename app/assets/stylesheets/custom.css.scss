@@ -1,0 +1,16 @@
+@import "bootstrap-sass-official/bootstrap-sprockets";
+@import "bootstrap-sass-official/bootstrap";
+@import "variables";
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  padding: 0;
+}
+
+.main-column {
+  margin: 10px;
+}

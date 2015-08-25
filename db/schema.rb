@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150821065223) do
+ActiveRecord::Schema.define(version: 20150824063448) do
 
   create_table "brands", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -80,5 +80,13 @@ ActiveRecord::Schema.define(version: 20150821065223) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
+
+  create_table "using_cosmetics", force: :cascade do |t|
+    t.integer  "user_id",     limit: 4
+    t.integer  "cosmetic_id", limit: 4
+    t.integer  "preference",  limit: 4
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
 
 end

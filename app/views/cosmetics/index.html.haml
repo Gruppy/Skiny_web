@@ -7,36 +7,37 @@
           = f.submit "検索", class: 'search-submit'
 
   .container
-    - if @cosmetics.present?
-      .cosmetics-list-wrap
-        %ul
-          - @cosmetics.each do |cosmetic|
-            %li.cosmetic-list-item
-              = link_to cosmetic_path(id: cosmetic.id) do
-                .cosmetic-name
-                  = cosmetic.name
-                .cosmetic-brand
-                  = cosmetic.brand_name
-                .cosmetic-price
-                  = cosmetic.store_price
-                  円
+    .main-column
+      - if @cosmetics.present?
+        .cosmetics-list-wrap
+          %ul
+            - @cosmetics.each do |cosmetic|
+              %li.cosmetic-list-item
+                = link_to cosmetic_path(id: cosmetic.id) do
+                  .cosmetic-name
+                    = cosmetic.name
+                  .cosmetic-brand
+                    = cosmetic.brand_name
+                  .cosmetic-price
+                    = cosmetic.store_price
+                    円
 
-    - else
-      - if params[:q].present?
-        - if params[:q][:name_or_brand_name_cont].present?
-          .no-cosmetics-wrap
-            お探しの商品はありません
-        - else
-          .no-cosmetics-wrap
-            検索ワードを入力して下さい
       - else
-        .delineation-wrap
-          %p.welcome-sentence
-            Skiny へようこそ！
-          %p.description-sentence
-            今お持ちのコスメ、憧れのコスメから、近い成分を持ったコスメを提案！
-            %br
-            %span
-              同じ成分なのに安いコスメが見つかる！
-          %p.notification-sentence
-            ※ 現在「化粧水」のみの対応です。（更新中）
+        - if params[:q].present?
+          - if params[:q][:name_or_brand_name_cont].present?
+            .no-cosmetics-wrap
+              お探しの商品はありません
+          - else
+            .no-cosmetics-wrap
+              検索ワードを入力して下さい
+        - else
+          .delineation-wrap
+            %p.welcome-sentence
+              Skiny へようこそ！
+            %p.description-sentence
+              今お持ちのコスメ、憧れのコスメから、近い成分を持ったコスメを提案！
+              %br
+              %span
+                同じ成分なのに安いコスメが見つかる！
+            %p.notification-sentence
+              ※ 現在「化粧水」のみの対応です。（更新中）

@@ -1,20 +1,21 @@
 .sessions-new-wrap
   .container
-    - if signed_in?
-      .title-wrap
-        すでにログインしています。一度ログアウトしてからお試し下さい。
-      .form-wrap
-        .link-button
-          = link_to "ログアウト", signout_path, method: :delete
-    - else
-      .title-wrap
-        ログイン
-      .form-wrap
-        = form_for :session, url: sessions_path do |f|
-          = f.text_field :email, placeholder: "メールアドレス", class: 'email-text-field'
-          = f.password_field :password, placeholder: "パスワード", class: 'password-field'
-          = f.submit "ログイン", class: 'submit-button'
-        %p
-          はじめての方は
-        .link-button
-          = link_to "無料会員登録", signup_path
+    .main-column
+      - if signed_in?
+        .title-wrap
+          すでにログインしています。一度ログアウトしてからお試し下さい。
+        .form-wrap
+          .link-button
+            = link_to "ログアウト", signout_path, method: :delete
+      - else
+        .title-wrap
+          ログイン
+        .form-wrap
+          = form_for :session, url: sessions_path do |f|
+            = f.text_field :email, placeholder: "メールアドレス", class: 'email-text-field'
+            = f.password_field :password, placeholder: "パスワード", class: 'password-field'
+            = f.submit "ログイン", class: 'submit-button'
+          %p
+            はじめての方は
+          .link-button
+            = link_to "無料会員登録", signup_path

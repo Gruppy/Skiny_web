@@ -1,48 +1,48 @@
 .cosmetics-show-wrap
   .container
-    - if @cosmetic
-      .cosmetic-top-wrap
-        .category-name
-          = @cosmetic.category_name
-        .cosmetic-name
-          = @cosmetic.name
-        .brand-name
-          = @cosmetic.brand_name
-        .store_price
-          = @cosmetic.store_price
-          円
+    .main-column
+      - if @cosmetic
+        .cosmetic-top-wrap
+          .category-name
+            = @cosmetic.category_name
+          .cosmetic-name
+            = @cosmetic.name
+          .brand-name
+            = @cosmetic.brand_name
+          .store_price
+            = @cosmetic.store_price
+            円
 
+      - if @similar_cosmetics.present?
+        .cosmetics-list-wrap
+          %ul.section-title-wrap
+            %li.left-bar
+            %li.section-title
+              成分が似ているコスメ
 
-    - if @similar_cosmetics.present?
-      .cosmetics-list-wrap
-        %ul.section-title-wrap
-          %li.left-bar
-          %li.section-title
-            成分が似ているコスメ
+          %ul
+            - @similar_cosmetics.each do |similar_cosmetic|
+              %li.cosmetic-list-item
+                = link_to cosmetic_path(id: similar_cosmetic.cosmetic_id) do
+                  .cosmetic-name
+                    = similar_cosmetic.name
+                  .cosmetic-brand
+                    = similar_cosmetic.brand_name
+                  .cosmetic-similarity
+                    = similar_cosmetic.value
+                  .cosmetic-price
+                    = similar_cosmetic.store_price
+                    円
 
-        %ul
-          - @similar_cosmetics.each do |similar_cosmetic|
-            %li.cosmetic-list-item
-              = link_to cosmetic_path(id: similar_cosmetic.cosmetic_id) do
-                .cosmetic-name
-                  = similar_cosmetic.name
-                .cosmetic-brand
-                  = similar_cosmetic.brand_name
-                .cosmetic-similarity
-                  = similar_cosmetic.value
-                .cosmetic-price
-                  = similar_cosmetic.store_price
-                  円
+      - if @ingredients.present?
+        .ingredients-list-wrap
+          %ul.section-title-wrap
+            %li.left-bar
+            %li.section-title
+              成分一覧
 
-    - if @ingredients.present?
-      .ingredients-list-wrap
-        %ul.section-title-wrap
-          %li.left-bar
-          %li.section-title
-            成分一覧
-
-        %ul
-          - @ingredients.each do |ingredient|
-            %li.ingredient-list-item
-              .ingredient-name
-                = ingredient.name
+          %ul
+            - @ingredients.each do |ingredient|
+              %li.ingredient-list-item
+                .ingredient-name
+                  = ingredient.name

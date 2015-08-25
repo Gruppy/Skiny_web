@@ -1,34 +1,35 @@
 .users-show-wrap
   .container
-    .title-wrap
-      = @user.name
+    .main-column
+      .title-wrap
+        = @user.name
 
-    .recomended-cosmetics-wrap
-      %ul.section-title-wrap
-        %li.left-bar
-        %li.section-title
-          本日のおすすめコスメ
+      .recomended-cosmetics-wrap
+        %ul.section-title-wrap
+          %li.left-bar
+          %li.section-title
+            本日のおすすめコスメ
 
-    .using-cosmetics-wrap
-      %ul.section-title-wrap
-        %li.left-bar
-        %li.section-title
-          使用中のコスメ
+      .using-cosmetics-wrap
+        %ul.section-title-wrap
+          %li.left-bar
+          %li.section-title
+            使用中のコスメ
 
-      .cosmetics-list-wrap
-        %ul
-          - @using_cosmetics.each do |using_cosmetic|
-            %li.cosmetic-list-item
-              = link_to cosmetic_path(id: using_cosmetic.id) do
-                .cosmetic-name
-                  = using_cosmetic.name
-                .cosmetic-brand
-                  = using_cosmetic.brand_name
-                .cosmetic-price
-                  = using_cosmetic.store_price
-                  円
+        .cosmetics-list-wrap
+          %ul
+            - @using_cosmetics.each do |using_cosmetic|
+              %li.cosmetic-list-item
+                = link_to cosmetic_path(id: using_cosmetic.id) do
+                  .cosmetic-name
+                    = using_cosmetic.name
+                  .cosmetic-brand
+                    = using_cosmetic.brand_name
+                  .cosmetic-price
+                    = using_cosmetic.store_price
+                    円
 
-    .profile-edit-button
-      = link_to "プロフィール設定", edit_user_path(current_user)
-    .signout-button
-      = link_to "ログアウト", signout_path, method: :delete
+      .profile-edit-button
+        = link_to "プロフィール設定", edit_user_path(current_user)
+      .signout-button
+        = link_to "ログアウト", signout_path, method: :delete

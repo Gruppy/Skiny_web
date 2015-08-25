@@ -37,6 +37,14 @@
       border: solid 1px $white;
       padding: 5px 10px 3px;
       border-radius: 13px;
+
+      a {
+        display: block;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 }

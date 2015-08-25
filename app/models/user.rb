@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
+  has_many :using_cosmetics, dependent: :destroy
+  has_many :cosmetics, through: :using_cosmetics
+
   validates :name, presence: true
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: true
 
@@ -15,6 +18,10 @@ class User < ActiveRecord::Base
 
   def User.encrypt(token)
     Digest::SHA1.hexdigest(token.to_s)
+  end
+
+  def cosmetics_using
+    Cosmetic.where(id: using_cosmetics.ids)
   end
 
   private

@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
+    @using_cosmetics = @user.cosmetics_using
   end
 
   def new
